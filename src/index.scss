@@ -1,0 +1,61 @@
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  left: 0;
+  display: flex;
+  padding-bottom: 0.96rem;
+  .tabbar_item {
+    flex: 1;
+    text-align: center;
+    padding-top: 1.152rem;
+    .tabbar_item_icon {
+      width: 1.664rem;
+      height: 1.664rem;
+      margin-bottom: 0.288rem;
+      transition: all 0.5s;
+    }
+    .tabbar_item_wx {
+      font-size: 0.64rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #000000;
+      transition: all 0.5s;
+    }
+    .tabbar_item_xz {
+      font-size: 0.64rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #1f73f1;
+      transition: all 0.5s;
+    }
+  }
+  .tabbar_btn {
+    flex: 1;
+    text-align: center;
+    .tabbar_btn_icon {
+      width: 3.104rem;
+      height: 3.104rem;
+    }
+    .tabbar_btn_text {
+      font-size: 0.64rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+}
+.van-grid-item__content {
+  background: none !important;
+}
+.van-tabs__line {
+  background: #1f73f1 !important;
+}
+.van-tabs__nav {
+  background: none !important;
+}
+.van-sticky--fixed {
+  background: #f6f6f6;
+  padding-top: 1.28rem;
+}

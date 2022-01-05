@@ -1,0 +1,93 @@
+.docking {
+  position: relative;
+  padding: 0 0.864rem;
+  padding-top: 0.768rem;
+  padding-bottom: 0.512rem;
+  background: #fff;
+  margin-top: 0.48rem;
+  .docking_top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.92rem;
+    height: 1.92rem;
+  }
+  .docking_info {
+    display: flex;
+    align-items: center;
+    .docking_info_tx {
+      width: 1.28rem;
+      height: 1.28rem;
+      border-radius: 0.64rem;
+      margin-right: 0.352rem;
+    }
+    .docking_info_name {
+      font-size: 0.768rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      margin-right: 0.448rem;
+    }
+    .docking_info_position {
+      font-size: 0.768rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #a4a4a4;
+      margin-right: 0.512rem;
+    }
+  }
+  .docking_title {
+    font-size: 0.96rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    margin-top: 0.768rem;
+  }
+  .docking_text {
+    display: flex;
+    margin-top: 0.768rem;
+    .docking_text_item {
+      font-size: 0.704rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #a4a4a4;
+      margin-right: 0.96rem;
+    }
+  }
+  .docking_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .docking_bottom_tag {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      .docking_bottom_tag_item {
+        margin-top: 0.64rem;
+        border: 0.032rem solid #7c7c7c;
+        border-radius: 0.096rem;
+        font-size: 0.704rem;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #7c7c7c;
+        line-height: 1;
+        padding: 0.16rem 0.576rem;
+        margin-right: 0.64rem;
+      }
+    }
+    .docking_bottom_type {
+      background: #ebf3ff;
+      border: 0.032rem solid #1f73f1;
+      border-radius: 0.16rem;
+      font-size: 0.704rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #1f73f1;
+      padding: 0.288rem 0.448rem;
+    }
+  }
+}
