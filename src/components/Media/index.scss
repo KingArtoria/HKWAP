@@ -1,0 +1,70 @@
+.media {
+  margin: 0 auto;
+  margin-top: 0.48rem;
+  width: 22.72rem;
+  padding: 0 0.832rem;
+  padding-bottom: 1.12rem;
+  position: relative;
+  background: #fff;
+  .media_icon {
+    position: absolute;
+    width: 1.216rem;
+    height: 1.216rem;
+    left: 0.832rem;
+    top: 0.608rem;
+  }
+  .media_title {
+    padding-top: 0.576rem;
+    text-indent: 1.6rem;
+    font-size: 0.96rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #2e2e2e;
+    line-height: 1.28rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 0.64rem;
+  }
+  .media_text {
+    margin-top: 0.64rem;
+    font-size: 0.704rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #a4a4a4;
+  }
+  .media_price {
+    font-size: 0.96rem;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #ff6600;
+    line-height: 1;
+    margin-top: 0.768rem;
+  }
+  .media_bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.088rem;
+    .media_bottom_item {
+      text-align: center;
+      flex: 1;
+      .media_bottom_item_value {
+        font-size: 0.832rem;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #3b3b3b;
+        line-height: 1;
+        margin-bottom: 0.96rem;
+      }
+      .media_bottom_item_key {
+        font-size: 0.768rem;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #a4a4a4;
+        line-height: 1;
+      }
+    }
+  }
+}

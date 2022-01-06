@@ -17,3 +17,35 @@ export const comprehensiveIndex = params => {
     params,
   });
 };
+/* 资源对接查询 */
+export const getResponses = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Comprehensive/getResponses',
+    params,
+  });
+};
+/* 查询新媒体 */
+export const queryrelGetResponses = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/getResponses',
+    params,
+  });
+};
+/* 域名查询 */
+export const queryrelDomainList = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/domainList',
+    params,
+  });
+};
+/* 网站查询 */
+export const queryrelWebList = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/webList',
+    params,
+  });
+};

@@ -1,0 +1,46 @@
+.domain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .domain_item {
+    .domain_item_data {
+      margin-top: 0.384rem;
+      width: 11.2rem;
+      border-radius: 0.32rem;
+      text-align: center;
+      background: #fff;
+      padding-top: 0.864rem;
+      padding-bottom: 1.024rem;
+      .domain_item_data_title {
+        font-size: 0.96rem;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #2e2e2e;
+        margin-bottom: 1.056rem;
+      }
+      .domain_item_data_price {
+        font-size: 0.96rem;
+        font-family: PingFang SC;
+        font-weight: bold;
+        color: #ff6600;
+        margin-bottom: 0.896rem;
+      }
+      .domain_item_data_tag {
+        padding: 0 0.64rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .domain_item_data_tag_item {
+          border: 0.032rem solid #7c7c7c;
+          border-radius: 0.096rem;
+          padding: 0.16rem 0.544rem;
+          margin-bottom: 0.64rem;
+          font-size: .704rem;
+          font-family: PingFang SC;
+          font-weight: 500;
+          color: #3b3b3b;
+        }
+      }
+    }
+  }
+}

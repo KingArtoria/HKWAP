@@ -4,7 +4,9 @@
   padding-top: 0.768rem;
   padding-bottom: 0.512rem;
   background: #fff;
+  margin: 0 auto;
   margin-top: 0.48rem;
+  width: 22.72rem;
   .docking_top {
     position: absolute;
     right: 0;
@@ -33,6 +35,14 @@
       font-weight: 500;
       color: #a4a4a4;
       margin-right: 0.512rem;
+    }
+    .docking_info_vip {
+      width: 1.152rem;
+      height: 0.896rem;
+    }
+    .docking_info_svip {
+      width: 1.92rem;
+      height: 0.64rem;
     }
   }
   .docking_title {

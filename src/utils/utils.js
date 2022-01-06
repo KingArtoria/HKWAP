@@ -1,6 +1,6 @@
 export const isNull = data => {
   let boolean = false;
-  if (data === null) boolean = true;
+  if (data === null || data.length === 0) boolean = true;
   return boolean;
 };
 export const timestampYMDHM = data => {

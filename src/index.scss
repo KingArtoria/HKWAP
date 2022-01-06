@@ -52,10 +52,13 @@
 .van-tabs__line {
   background: #1f73f1 !important;
 }
-.van-tabs__nav {
-  background: none !important;
-}
 .van-sticky--fixed {
   background: #f6f6f6;
   padding-top: 1.28rem;
+}
+.van-tabs__content {
+  min-height: 44.8rem;
+}
+.van-tabs {
+  background: #f6f6f6;
 }

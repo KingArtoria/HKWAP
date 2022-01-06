@@ -3,10 +3,10 @@
     <div class="docking">
       <img src="@assets/sy_zd.png" class="docking_top" />
       <div class="docking_info">
-        <img :src="`https://admin.bdhuoke.com${item.head}`" class="docking_info_tx" alt="头像丢失" />
-        <div class="docking_info_name">{{ item.nick_name }}</div>
+        <img :src="`https://admin.bdhuoke.com${item.head}`" class="docking_info_tx" v-if="item.head" />
+        <div class="docking_info_name" :style="`color:${item.name_color}`">{{ item.nick_name }}</div>
         <div class="docking_info_position">| 职位</div>
-        <img src="http://39.106.208.234/pic/img_/svip.png" class="docking_info_vip" v-if="item.is_super == 1" />
+        <img src="http://39.106.208.234/pic/img_/svip.png" class="docking_info_svip" v-if="item.is_super == 1" />
         <img src="http://39.106.208.234/pic/img_/vip_l@2x.png" class="docking_info_vip" v-else-if="item.is_vip == 1" />
       </div>
       <div class="docking_title">{{ item.title }}</div>
