@@ -92,3 +92,12 @@ export const lhcount = data => {
     data,
   });
 };
+/* 资源详细 */
+export const getObtainInfo = params => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'GET',
+    url: '/v3/Comprehensive/getObtainInfo',
+    params,
+  });
+};
