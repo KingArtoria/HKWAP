@@ -14,11 +14,11 @@
             </van-swipe-item>
           </van-swipe>
           <div class="tag">
-            <img src="@assets/sy_ptjy.png" class="tag_item" @click="downloadAPP"/>
-            <img src="@assets/sy_qycx.png" class="tag_item" @click="downloadAPP"/>
-            <img src="@assets/sy_zzbl.png" class="tag_item" />
+            <img src="@assets/sy_ptjy.png" class="tag_item" @click="downloadAPP" />
+            <img src="@assets/sy_qycx.png" class="tag_item" @click="downloadAPP" />
+            <img src="@assets/sy_zzbl.png" class="tag_item" @click="goCertificate" />
           </div>
-          <img src="@assets/sy_ggtf.png" class="ad" />
+          <img src="@assets/sy_ggtf.png" class="ad" @click="goAd" />
           <div class="grid">
             <van-swipe style="padding-bottom: 0.64rem" :loop="false">
               <van-swipe-item>
@@ -145,6 +145,12 @@ export default {
     };
   },
   methods: {
+    /* 前往广告位 */ goAd() {
+      this.$router.push('/ad');
+    },
+    /* 前往资质办理 */ goCertificate() {
+      this.$router.push('/certificate');
+    },
     /* 下载APP */ downloadAPP() {
       window.location.href = 'http://39.106.208.234/azb/BDhuoke.apk';
     },

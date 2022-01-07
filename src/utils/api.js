@@ -49,3 +49,37 @@ export const queryrelWebList = params => {
     params,
   });
 };
+/* 获取办证服务 */
+export const getRegistration = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v3/Registration/getRegistration',
+    data: qs.stringify(data),
+  });
+};
+/* 添加广告申请 */
+export const setAdverti = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v2/Advertising/setAdverti',
+    data: qs.stringify(data),
+  });
+};
+/* 获取广告位置 */
+export const getPlace = () => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v2/Advertising/getPlace',
+  });
+};
+/* 获取投放周期 */
+export const getCycle = () => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v2/Advertising/getCycle',
+  });
+};

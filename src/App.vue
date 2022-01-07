@@ -1,7 +1,7 @@
 <template>
-  <div id="app" style="padding-bottom: 5rem">
+  <div id="app" :style="`padding-bottom: ${paddingBottom}rem`">
     <router-view />
-    <div class="tabbar">
+    <div class="tabbar" v-if="tabbarShow">
       <div class="tabbar_item" @click="selectTabbar(1)">
         <img src="@assets/shy_wx.png" class="tabbar_item_icon" v-if="tabbarCurr != 1" />
         <div class="tabbar_item_wx" v-if="tabbarCurr != 1">首页</div>
@@ -39,6 +39,8 @@ export default {
   data() {
     return {
       /* 当前tabbar */ tabbarCurr: 1,
+      /* 展示tabbar */ tabbarShow: true,
+      /* paddingBottom */ paddingBottom: 5,
     };
   },
   methods: {
@@ -53,6 +55,12 @@ export default {
   },
   destroyed() {
     localStorage.setItem('time', timestampYMDHM(new Date()));
+  },
+  watch: {
+    $route(to) {
+      if (to.path != '/') [this.tabbarShow, this.paddingBottom] = [false, 0];
+      else [this.tabbarShow, this.paddingBottom] = [true, 5];
+    },
   },
 };
 </script>
