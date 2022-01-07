@@ -36,7 +36,6 @@ export default {
   },
   methods: {
     /* 分离数组 */ separateList() {
-      console.log(this.dataArray, 'array');
       this.leftList = this.dataArray.filter(item => item.id % 2 != 0);
       this.rightList = this.dataArray.filter(item => item.id % 2 == 0);
     },

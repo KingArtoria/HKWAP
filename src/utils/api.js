@@ -83,3 +83,12 @@ export const getCycle = () => {
     url: '/v2/Advertising/getCycle',
   });
 };
+/* 靓号统计 */
+export const lhcount = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v3/prop/lhcount',
+    data,
+  });
+};

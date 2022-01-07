@@ -23,25 +23,25 @@
             <van-swipe style="padding-bottom: 0.64rem" :loop="false">
               <van-swipe-item>
                 <van-grid :column-num="5" :border="false">
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_ggjf@2x.png" text="广告甲方" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_llyftb@2x.png" text="流量乙方" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_yzhy@2x.png" text="优质货源" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xsqd.png" text="销售渠道" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_zyhh@2x.png" text="资源互换" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_llhh@2x.png" text="流量互换" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_zsjm@2x.png" text="招商加盟" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xxgg@2x.png" text="线下广告" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xxcd@2x.png" text="线下场地" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_mffl@2x.png" text="免费福利" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_ggjf@2x.png" text="广告甲方" @click="goSingleList(1)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_llyftb@2x.png" text="流量乙方" @click="goSingleList(2)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_yzhy@2x.png" text="优质货源" @click="goSingleList(3)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xsqd.png" text="销售渠道" @click="goSingleList(4)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_zyhh@2x.png" text="资源互换" @click="goSingleList(5)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_llhh@2x.png" text="流量互换" @click="goSingleList(6)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_zsjm@2x.png" text="招商加盟" @click="goSingleList(7)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xxgg@2x.png" text="线下广告" @click="goSingleList(8)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xxcd@2x.png" text="线下场地" @click="goSingleList(9)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_mffl@2x.png" text="免费福利" @click="goSingleList(10)" />
                 </van-grid>
               </van-swipe-item>
               <van-swipe-item>
                 <van-grid :column-num="5" :border="false">
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/tjxm_jgq@2x.png" text="易达靓号" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xmtzr@2x.png" text="新媒体转让" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/wzzr@2x.png" text="网站转让" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/ymzr@2x.png" text="域名转让" />
-                  <van-grid-item icon="http://39.106.208.234/pic/img_/djzx@2x.png" text="道具中心" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/tjxm_jgq@2x.png" text="易达靓号" @click="goYidalh" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/sy_xmtzr@2x.png" text="新媒体转让" @click="goSingleList(11)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/wzzr@2x.png" text="网站转让" @click="goSingleList(12)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/ymzr@2x.png" text="域名转让" @click="goSingleList(13)" />
+                  <van-grid-item icon="http://39.106.208.234/pic/img_/djzx@2x.png" text="道具中心" @click="downloadAPP" />
                 </van-grid>
               </van-swipe-item>
             </van-swipe>
@@ -131,7 +131,7 @@ import Docking from '@components/Docking/index';
 import Media from '@components/Media/index';
 import Domain from '@components/Domain/index';
 import Website from '@components/Website/index';
-import { comprehensiveIndex, getPic, getResponses, queryrelGetResponses, queryrelDomainList, queryrelWebList } from '@utils/api';
+import { comprehensiveIndex, getPic, getResponses, queryrelGetResponses, queryrelDomainList, queryrelWebList, lhcount } from '@utils/api';
 import { isNull } from '@utils/utils';
 export default {
   data() {
@@ -145,6 +145,13 @@ export default {
     };
   },
   methods: {
+    /* 跳转靓号 */ goYidalh() {
+      lhcount();
+      location.href = 'http://yidalh.zhibiwl.com';
+    },
+    /* 前往单个列表 */ goSingleList(num) {
+      this.$router.push(`/singleList/${num}`);
+    },
     /* 前往广告位 */ goAd() {
       this.$router.push('/ad');
     },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="docking">
+    <div class="docking" @click="goInfo(item.id)">
       <img src="@assets/sy_zd.png" class="docking_top" />
       <div class="docking_info">
         <img :src="`https://admin.bdhuoke.com${item.head}`" class="docking_info_tx" v-if="item.head" />
@@ -49,6 +49,11 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    /* 前往资源对接详页 */ goInfo(id) {
+      this.$router.push(`/info/docking/${id}`);
+    },
   },
 };
 </script>
