@@ -34,7 +34,7 @@
   </div>
 </template>
 <script>
-import { timestampYMDHM } from '@utils/utils';
+import { timestampYMDHM, isDevice } from '@utils/utils';
 export default {
   data() {
     return {
@@ -45,7 +45,8 @@ export default {
   },
   methods: {
     /* 下载APP */ downloadAPP() {
-      window.location.href = 'http://39.106.208.234/azb/BDhuoke.apk';
+      if (isDevice() == 'and') window.location.href = 'http://39.106.208.234/azb/BDhuoke.apk';
+      else window.location.href = 'https://itunes.apple.com/cn/app/id1568041500?mt=8';
     },
     /* 选中tabbar */ selectTabbar(num) {
       this.tabbarCurr = num;
