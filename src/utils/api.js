@@ -101,3 +101,27 @@ export const getObtainInfo = params => {
     params,
   });
 };
+/* 查询新媒体详情 */
+export const getMediaInfo = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/getMediaInfo',
+    params,
+  });
+};
+/* 域名查询详情 */
+export const getDomainInfo = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/getDomainInfo',
+    params,
+  });
+};
+/* 网站详情查询 */
+export const getWebInfo = params => {
+  return request({
+    method: 'GET',
+    url: '/v3/Queryrel/getWebInfo',
+    params,
+  });
+};

@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     /* 域名查询 */ queryrelDomainList() {
-      queryrelDomainList(this.listParams).then(res => {
+      queryrelDomainList().then(res => {
         if (isNull(res.data)) {
           this.finished = true;
           return false;

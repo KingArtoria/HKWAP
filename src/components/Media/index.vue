@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="media">
+    <div class="media" @click="goMedia(item.platform, item.id)">
       <img src="http://39.106.208.234/pic/img_/kuaishou@2x.png" class="media_icon" v-if="item.platform == 1" />
       <img src="http://39.106.208.234/pic/img_/weibo@2x.png" class="media_icon" v-if="item.platform == 2" />
       <img src="http://39.106.208.234/pic/img_/weixin@2x.png" class="media_icon" v-if="item.platform == 3" />
@@ -59,7 +59,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    /* 前往详细 */ goMedia(platform, id) {
+      this.$router.push(`/info/media/${platform}/${id}`);
+    },
+  },
 };
 </script>
 

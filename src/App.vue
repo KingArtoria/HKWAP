@@ -50,6 +50,9 @@ export default {
         case 1:
           this.$router.push('/');
           break;
+        case 2:
+          this.$router.push('/contacts');
+          break;
       }
     },
   },
@@ -58,7 +61,7 @@ export default {
   },
   watch: {
     $route(to) {
-      if (to.path != '/') [this.tabbarShow, this.paddingBottom] = [false, 0];
+      if (to.path != '/' && to.path != '/contacts') [this.tabbarShow, this.paddingBottom] = [false, 0];
       else [this.tabbarShow, this.paddingBottom] = [true, 5];
     },
   },

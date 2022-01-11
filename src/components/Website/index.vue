@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="website">
+    <div class="website" @click="goWebsite(item.id)">
       <div class="website_title">{{ item.title }}</div>
       <div class="website_price">￥{{ item.price }}</div>
       <div class="website_tag">
@@ -37,6 +37,11 @@
 export default {
   props: {
     item: { type: Object },
+  },
+  methods: {
+    /* 前往网站详细 */ goWebsite(id) {
+      this.$router.push(`/info/website/${id}`);
+    },
   },
 };
 </script>
