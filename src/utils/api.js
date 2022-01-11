@@ -125,3 +125,12 @@ export const getWebInfo = params => {
     params,
   });
 };
+/* 推荐人脉 */
+export const getRecommendList = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/friend/getRecommendList',
+    data: qs.stringify(data),
+  });
+};

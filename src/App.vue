@@ -14,7 +14,7 @@
         <img src="@assets/renmai_xz.png" class="tabbar_item_icon" v-if="tabbarCurr == 2" />
         <div class="tabbar_item_xz" v-if="tabbarCurr == 2">人脉</div>
       </div>
-      <div class="tabbar_btn">
+      <div class="tabbar_btn" @click="downloadAPP">
         <img src="@assets/fabu@2x.png" class="tabbar_btn_icon" />
         <div class="tabbar_btn_text">发布</div>
       </div>
@@ -44,6 +44,9 @@ export default {
     };
   },
   methods: {
+    /* 下载APP */ downloadAPP() {
+      window.location.href = 'http://39.106.208.234/azb/BDhuoke.apk';
+    },
     /* 选中tabbar */ selectTabbar(num) {
       this.tabbarCurr = num;
       switch (num) {
@@ -53,6 +56,12 @@ export default {
         case 2:
           this.$router.push('/contacts');
           break;
+        case 3:
+          this.downloadAPP();
+          break;
+        case 4:
+          this.$router.push('/service');
+          break;
       }
     },
   },
@@ -61,7 +70,7 @@ export default {
   },
   watch: {
     $route(to) {
-      if (to.path != '/' && to.path != '/contacts') [this.tabbarShow, this.paddingBottom] = [false, 0];
+      if (to.path != '/' && to.path != '/contacts' && to.path != '/service') [this.tabbarShow, this.paddingBottom] = [false, 0];
       else [this.tabbarShow, this.paddingBottom] = [true, 5];
     },
   },

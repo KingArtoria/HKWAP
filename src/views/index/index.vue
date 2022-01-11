@@ -1,11 +1,11 @@
 <template>
   <div>
     <van-pull-refresh v-model="refreshLoading" @refresh="refresh">
-      <div class="head">
+      <!-- <div class="head">
         <div class="head_search" @click="goSearch">
           <van-field clearable left-icon="search" placeholder="地推 | 拉新 | 教育 | 跑量 | 阅读..." style="border-radius: 1.12rem; border: 0.064rem solid #4281fe" />
         </div>
-      </div>
+      </div> -->
       <div class="content">
         <div class="content_top">
           <van-swipe autoplay="3000" style="height: 6.4rem" :show-indicators="false" class="swipe">
