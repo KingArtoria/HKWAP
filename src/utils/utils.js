@@ -13,9 +13,14 @@
   return `${y}-${m}-${d} ${h}:${mm}`;
 };
 /* 区分设备 */ export const isDevice = () => {
-  let device = 'and';
   let u = navigator.userAgent;
+  let ua = navigator.userAgent.toLowerCase();
+  let device = 'and';
   let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-  if (isIOS) device = 'ios';
+  if (ua.match(/MicroMessenger/i) == 'micromessenger') device = 'wx';
+  else if (isIOS) device = 'ios';
   return device;
 };
+/* 关键词 */ export const keyWords = () => {
+  return ['']
+}

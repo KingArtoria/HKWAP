@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="docking" @click="goInfo(item.id)">
-      <img src="@assets/sy_zd.png" class="docking_top" />
+      <div class="docking_line" v-if="item.supertoptime > 0" />
+      <div class="docking_super" v-if="item.supertoptime > 0">
+        <img src="http://39.106.208.234/pic/img_/cjzd.png" class="docking_super_icon" />
+      </div>
+      <img src="@assets/sy_zd.png" class="docking_top" v-else-if="item.toptime > 0 || item.above_time > 0" />
       <div class="docking_info">
         <img :src="`https://admin.bdhuoke.com${item.head}`" class="docking_info_tx" v-if="item.head" />
         <div class="docking_info_name" :style="`color:${item.name_color}`">{{ item.nick_name }}</div>
@@ -27,6 +31,7 @@
           <div class="docking_bottom_tag_item" v-if="item.type == 7 || item.type == 9">{{ item.comprehensive == 0 ? '议价' : item.comprehensive }}</div>
           <div class="docking_bottom_tag_item" v-if="item.type == 8">曝光：{{ item.user_number }}</div>
         </div>
+        <div class="docking_bottom_ad" v-if="item.advertisement_time > 0">广告</div>
         <div class="docking_bottom_type" v-if="item.type == 1">广告甲方</div>
         <div class="docking_bottom_type" v-if="item.type == 2">流量乙方</div>
         <div class="docking_bottom_type" v-if="item.type == 3">优质货源</div>
@@ -52,7 +57,7 @@ export default {
   },
   methods: {
     /* 前往资源对接详页 */ goInfo(id) {
-      this.$router.push(`/info/docking/${id}`);
+      this.$emit('goInfo')
     },
   },
 };

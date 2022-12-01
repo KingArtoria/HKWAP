@@ -7,6 +7,25 @@
   margin: 0 auto;
   margin-top: 0.48rem;
   width: 22.72rem;
+  .docking_super {
+    width: 22.72rem;
+    height: 1.824rem;
+    background: #e1edff;
+    border-radius: 0.288rem 0.288rem 0px 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    .docking_super_icon {
+      width: 3.2rem;
+      height: 0.736;
+      padding-left: 0.704rem;
+    }
+  }
+  .docking_line {
+    height: 1.824rem;
+  }
   .docking_top {
     position: absolute;
     right: 0;
@@ -98,6 +117,15 @@
       font-family: PingFang SC;
       font-weight: 500;
       color: #1f73f1;
+      padding: 0.288rem 0.448rem;
+    }
+    .docking_bottom_ad {
+      background: #f6f6f6;
+      border-radius: 0.16rem;
+      font-size: 0.704rem;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #bbbbbb;
       padding: 0.288rem 0.448rem;
     }
   }

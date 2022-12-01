@@ -13,7 +13,7 @@ export const getPic = data => {
 export const comprehensiveIndex = params => {
   return request({
     method: 'GET',
-    url: '/v3/Comprehensive/index',
+    url: '/v41/Comprehensive/index',
     params,
   });
 };
@@ -21,7 +21,7 @@ export const comprehensiveIndex = params => {
 export const getResponses = params => {
   return request({
     method: 'GET',
-    url: '/v3/Comprehensive/getResponses',
+    url: '/v41/Comprehensive/getResponses',
     params,
   });
 };
@@ -29,7 +29,7 @@ export const getResponses = params => {
 export const queryrelGetResponses = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/getResponses',
+    url: '/v41/Queryrel/getResponses',
     params,
   });
 };
@@ -37,7 +37,7 @@ export const queryrelGetResponses = params => {
 export const queryrelDomainList = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/domainList',
+    url: '/v41/Queryrel/domainList',
     params,
   });
 };
@@ -45,7 +45,7 @@ export const queryrelDomainList = params => {
 export const queryrelWebList = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/webList',
+    url: '/v41/Queryrel/webList',
     params,
   });
 };
@@ -54,7 +54,7 @@ export const getRegistration = data => {
   return request({
     header: { 'Content-Type': 'application/x-www-form-urlencoded' },
     method: 'POST',
-    url: '/v3/Registration/getRegistration',
+    url: '/v41/Registration/getRegistration',
     data: qs.stringify(data),
   });
 };
@@ -88,7 +88,7 @@ export const lhcount = data => {
   return request({
     header: { 'Content-Type': 'application/x-www-form-urlencoded' },
     method: 'POST',
-    url: '/v3/prop/lhcount',
+    url: '/v41/prop/lhcount',
     data,
   });
 };
@@ -97,7 +97,7 @@ export const getObtainInfo = params => {
   return request({
     header: { 'Content-Type': 'application/x-www-form-urlencoded' },
     method: 'GET',
-    url: '/v3/Comprehensive/getObtainInfo',
+    url: '/v41/Comprehensive/getObtainInfo',
     params,
   });
 };
@@ -105,7 +105,7 @@ export const getObtainInfo = params => {
 export const getMediaInfo = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/getMediaInfo',
+    url: '/v41/Queryrel/getMediaInfo',
     params,
   });
 };
@@ -113,7 +113,7 @@ export const getMediaInfo = params => {
 export const getDomainInfo = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/getDomainInfo',
+    url: '/v41/Queryrel/getDomainInfo',
     params,
   });
 };
@@ -121,7 +121,7 @@ export const getDomainInfo = params => {
 export const getWebInfo = params => {
   return request({
     method: 'GET',
-    url: '/v3/Queryrel/getWebInfo',
+    url: '/v41/Queryrel/getWebInfo',
     params,
   });
 };
@@ -131,6 +131,24 @@ export const getRecommendList = data => {
     header: { 'Content-Type': 'application/x-www-form-urlencoded' },
     method: 'POST',
     url: '/friend/getRecommendList',
+    data: qs.stringify(data),
+  });
+};
+/* 注册 */
+export const sign = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v41/login/sign',
+    data: qs.stringify(data),
+  });
+};
+/* 短信接口 */
+export const getCode = data => {
+  return request({
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    method: 'POST',
+    url: '/v41/Alibabasms/sms',
     data: qs.stringify(data),
   });
 };
